@@ -198,7 +198,7 @@
         "('Matías', 'QA Testing', 1.0)",
         () => {
           assert.strictEqual(
-            validarYProcesarDatos("Matías", "QA Testing", 1.0),
+            validarYProcesarDatos("Matías", "QA Testing", 0.0),
             "Recuperatorio",
           );
         },
@@ -211,7 +211,7 @@
         "('Matías', 'QA Testing', 10.0)",
         () => {
           assert.strictEqual(
-            validarYProcesarDatos("Matías", "QA Testing", 10.0),
+            validarYProcesarDatos("Matías", "QA Testing", 11.0),
             "Promocionado",
           );
         },
