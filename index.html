@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Academia Digital - Panel</title>
+    <link rel="stylesheet" href="estilos.css"> 
+    <script src="funciones.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <div id="loginSection">
+        <h2>Ingreso al Sistema</h2>
+        <div class="form-group">
+            <label>Usuario</label>
+            <input type="text" id="userInput">
+        </div>
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" id="passInput">
+        </div>
+        <button id="loginBtn" onclick="controladorLogin()">Autenticar</button>
+        <div id="loading">Conectando con el servidor...</div>
+        <p id="loginError" class="error-msg"></p>
+    </div>
+
+    <div id="panelProfesor">
+        <h2>Panel de Gestión - Profesor</h2>
+        
+        <div class="tabs-menu">
+            <button id="btnTabCarga" class="tab-btn active" onclick="cambiarVistaProfesor('carga')">📝 Registrar Notas</button>
+            <button id="btnTabVisor" class="tab-btn" onclick="cambiarVistaProfesor('visor')">📊 Ver Calificaciones</button>
+        </div>
+
+        <div id="seccionCargaProfesor" style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+            <h4>Cargar Nueva Calificación</h4>
+            <div class="form-group"><label>Alumno</label><input type="text" id="alumnoInput"></div>
+            <div class="form-group"><label>Materia</label><input type="text" id="materiaInput"></div>
+            <div class="form-group"><label>Nota</label><input type="number" step="0.1" id="notaInput"></div>
+            <button id="regBtn" onclick="controladorCarga()">Registrar Nota</button>
+            <p id="cargaError" class="error-msg"></p>
+        </div>
+
+        <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
+    </div>
+
+    <div id="panelAlumno">
+        <h2>Portal del Estudiante</h2>
+        <p>Bienvenido al sistema de consulta de calificaciones.</p>
+        <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
+    </div>
+
+    <div id="actionPanel">
+        <h3>Historial de Calificaciones</h3>
+        <table id="tablaNotas">
+            <thead>
+                <tr><th>Alumno</th><th>Materia</th><th>Nota</th><th>Condición</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="recuperatorioSection" style="display:none; margin-top:20px; background:#fff3cd; padding:15px; border-radius:8px;">
+            <p style="color:#856404; font-weight:bold;">⚠️ Alumno en riesgo académico detectado.</p>
+            <button style="background:#ffc107; color:black;" id="btnRecuperatorio">Generar Examen de Repaso</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+</script>
+</body>
+</html>

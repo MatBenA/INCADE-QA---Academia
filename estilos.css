@@ -1,0 +1,125 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f0f2f5;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 650px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/*Botones*/
+button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+/*Tabla*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #f8f9fa;
+}
+.badge-red {
+  background: #ffcccc;
+  color: #cc0000;
+  padding: 5px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.badge-green {
+  background: #ccffcc;
+  color: #006600;
+  padding: 5px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+#panelProfesor,
+#panelAlumno,
+#loading,
+#actionPanel,
+#seccionCargaProfesor {
+  display: none;
+}
+.error-msg {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+.logout-btn {
+  background: #dc3545;
+  margin-top: 25px;
+  padding: 8px;
+  font-size: 14px;
+  width: auto;
+  display: inline-block;
+}
+#loading {
+  text-align: center;
+  margin-top: 10px;
+  color: #007bff;
+}
+
+/* Estilos para el menú de pestañas */
+.tabs-menu {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+.tab-btn {
+  background: #e4e6eb;
+  color: #333;
+  padding: 10px 15px;
+  font-size: 14px;
+  width: auto;
+  flex: 1;
+}
+.tab-btn.active {
+  background: #28a745;
+  color: white;
+}
